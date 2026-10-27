@@ -14,3 +14,17 @@ def create_db():
         prediksi_fakultas TEXT NOT NULL
         )
     """)
+    conn.commit()
+    conn.close()
+
+create_db()
+
+def predict():
+    if inggris > biologi AND inggris > fisika:
+       return "Bahasa"
+    elif biologi > inggris AND biologi > fisika:
+       return "kedokteran"
+    elif fisika > inggris AND fisika > biologi:
+      return "Teknik"
+    else :
+       return "mending nggak usah sekolah"
